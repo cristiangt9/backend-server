@@ -31,20 +31,28 @@ var app = express();
 // ==========================//
 
 app.get('/', (req, res, next) => {
+    var desde = req.query.desde || 0;
+    desde = Number(desde);
+    Usuario.find({}, 'nombre email img role')
+        .skip(desde)
+        .limit(5)
+        .exec((err, usuarios) => {
+            if (err) {
+                return res.status(500).json({
+                    ok: false,
+                    mensaje: 'Error en la base de datos',
+                    error: err
+                });
+            }
+            Usuario.count({}, (err, count) => {
 
-    Usuario.find({}, 'nombre email img role').exec((err, usuarios) => {
-        if (err) {
-            return res.status(500).json({
-                ok: false,
-                mensaje: 'Error en la base de datos',
-                error: err
+                res.status(200).json({
+                    ok: true,
+                    usuarios: usuarios,
+                    total: count
+                });
             });
-        }
-        res.status(200).json({
-            ok: true,
-            usuarios: usuarios
         });
-    });
 });
 // ========================= //
 // Crear un nuevo Usuario    //
@@ -80,7 +88,7 @@ app.post('/', mdAutenticacion.verificaToken, (req, res) => {
 // Actualizar un nuevo Usuario //
 // ============================//
 
-app.put('/:id', (req, res) => {
+app.put('/:id', mdAutenticacion.verificaToken, (req, res) => {
     var id = req.params.id;
     var body = req.body;
 
@@ -113,6 +121,7 @@ app.put('/:id', (req, res) => {
             usuarioGuardado.password = '*******';
             res.status(202).json({
                 ok: true,
+                mensaje: 'usuario de id: ' + id + ' actulizado',
                 usuarios: usuarioGuardado
             });
         });
@@ -123,7 +132,7 @@ app.put('/:id', (req, res) => {
 // Eliminar un Usuario por el id//
 // ============================//
 
-app.delete('/:id', (req, res) => {
+app.delete('/:id', mdAutenticacion.verificaToken, (req, res) => {
     var id = req.params.id;
     Usuario.findByIdAndRemove(id, (err, usuario) => {
         if (err) {
@@ -142,6 +151,7 @@ app.delete('/:id', (req, res) => {
         }
         res.status(202).json({
             ok: true,
+            mensaje: 'Usuariocon id: ' + id + ' eliminado',
             usuarios: usuario
         });
     });
