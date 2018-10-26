@@ -1,0 +1,751 @@
+{
+	"info": {
+		"_postman_id": "c3b0b52d-c728-4544-a7dd-6449c7afb6f2",
+		"name": "HospitalDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuario: Obtener usuarios",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Geraldin",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "geralangy@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "loquesea",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/usuario",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuario"
+					]
+				},
+				"description": "Obtener todos los usuarios de la base de datos"
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario: Crear usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Geraldin",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "geralangy@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/usuario",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuario"
+					]
+				},
+				"description": "aqui se crea usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario: Actualizar usuario por id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Geraldin",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "ADMIN_ROLE",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "jaime1@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/usuario/5bd1c6f688854d1868a1e5f5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuario",
+						"5bd1c6f688854d1868a1e5f5"
+					]
+				},
+				"description": "Actualizar usuario por id"
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario: Borrar usuario por id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/usuario/5bd1c5c388854d1868a1e5f4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuario",
+						"5bd1c5c388854d1868a1e5f4"
+					]
+				},
+				"description": "Este metodo permite elminar un usurio mediante su id"
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario: login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "cristiangt9@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				},
+				"description": "metodo para hacer el login de un usuario y regresa un token de acceso"
+			},
+			"response": []
+		},
+		{
+			"name": "Hospital: Obtener hospitales",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/hospital",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"hospital"
+					]
+				},
+				"description": "metodo para obtener todos los hospitales de la base de datos.\t"
+			},
+			"response": []
+		},
+		{
+			"name": "Hospital: Crear hospital",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Hospital del Oeste",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/hospital?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImltZyI6bnVsbCwicm9sZSI6IlVTRVJfUk9MRSIsIl9pZCI6IjViZDFkNGZiNDVhMGY3MjFmNDNkODRlOSIsIm5vbWJyZSI6IkNyaXN0aWFuIiwiZW1haWwiOiJjcmlzdGlhbmd0OUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IioqKioqKioiLCJfX3YiOjB9LCJpYXQiOjE1NDA0OTY0NzgsImV4cCI6MTU0MDUxMDg3OH0.DTrFV06C1amgnxDAAK3-Lcs5YxsR7EygCwrb3AiYsIM",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"hospital"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImltZyI6bnVsbCwicm9sZSI6IlVTRVJfUk9MRSIsIl9pZCI6IjViZDFkNGZiNDVhMGY3MjFmNDNkODRlOSIsIm5vbWJyZSI6IkNyaXN0aWFuIiwiZW1haWwiOiJjcmlzdGlhbmd0OUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IioqKioqKioiLCJfX3YiOjB9LCJpYXQiOjE1NDA0OTY0NzgsImV4cCI6MTU0MDUxMDg3OH0.DTrFV06C1amgnxDAAK3-Lcs5YxsR7EygCwrb3AiYsIM"
+						}
+					]
+				},
+				"description": "método para crear hospital"
+			},
+			"response": []
+		},
+		{
+			"name": "Hospital: Actualizar hospital por id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Hospital del Norte",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/hospital/5bd21d991e1c122430ef3f56?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImltZyI6bnVsbCwicm9sZSI6IlVTRVJfUk9MRSIsIl9pZCI6IjViZDFkNGZiNDVhMGY3MjFmNDNkODRlOSIsIm5vbWJyZSI6IkNyaXN0aWFuIiwiZW1haWwiOiJjcmlzdGlhbmd0OUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IioqKioqKioiLCJfX3YiOjB9LCJpYXQiOjE1NDA0OTY0NzgsImV4cCI6MTU0MDUxMDg3OH0.DTrFV06C1amgnxDAAK3-Lcs5YxsR7EygCwrb3AiYsIM",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"hospital",
+						"5bd21d991e1c122430ef3f56"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImltZyI6bnVsbCwicm9sZSI6IlVTRVJfUk9MRSIsIl9pZCI6IjViZDFkNGZiNDVhMGY3MjFmNDNkODRlOSIsIm5vbWJyZSI6IkNyaXN0aWFuIiwiZW1haWwiOiJjcmlzdGlhbmd0OUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IioqKioqKioiLCJfX3YiOjB9LCJpYXQiOjE1NDA0OTY0NzgsImV4cCI6MTU0MDUxMDg3OH0.DTrFV06C1amgnxDAAK3-Lcs5YxsR7EygCwrb3AiYsIM"
+						},
+						{
+							"key": "nombre",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "este método es para actualizar un hospital mediante su id"
+			},
+			"response": []
+		},
+		{
+			"name": "Hospital: Borrar hospital por id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/hospital/5bd21ff637bc0e23e4568d88?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImltZyI6bnVsbCwicm9sZSI6IlVTRVJfUk9MRSIsIl9pZCI6IjViZDFkNGZiNDVhMGY3MjFmNDNkODRlOSIsIm5vbWJyZSI6IkNyaXN0aWFuIiwiZW1haWwiOiJjcmlzdGlhbmd0OUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IioqKioqKioiLCJfX3YiOjB9LCJpYXQiOjE1NDA0OTY0NzgsImV4cCI6MTU0MDUxMDg3OH0.DTrFV06C1amgnxDAAK3-Lcs5YxsR7EygCwrb3AiYsIM",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"hospital",
+						"5bd21ff637bc0e23e4568d88"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImltZyI6bnVsbCwicm9sZSI6IlVTRVJfUk9MRSIsIl9pZCI6IjViZDFkNGZiNDVhMGY3MjFmNDNkODRlOSIsIm5vbWJyZSI6IkNyaXN0aWFuIiwiZW1haWwiOiJjcmlzdGlhbmd0OUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IioqKioqKioiLCJfX3YiOjB9LCJpYXQiOjE1NDA0OTY0NzgsImV4cCI6MTU0MDUxMDg3OH0.DTrFV06C1amgnxDAAK3-Lcs5YxsR7EygCwrb3AiYsIM"
+						}
+					]
+				},
+				"description": "Este metodo se encarga de elminar un hospital por su id"
+			},
+			"response": []
+		},
+		{
+			"name": "Medico: Obtener médicos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/medico",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"medico"
+					]
+				},
+				"description": "Método para obtener todos los médicos de la base de datos"
+			},
+			"response": []
+		},
+		{
+			"name": "Medico: Crear médicos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Cristian Gonzalez",
+							"type": "text"
+						},
+						{
+							"key": "hospital",
+							"value": "5bd2332eadc26a22284ca0ac",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/medico?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImltZyI6bnVsbCwicm9sZSI6IlVTRVJfUk9MRSIsIl9pZCI6IjViZDFkNGZiNDVhMGY3MjFmNDNkODRlOSIsIm5vbWJyZSI6IkNyaXN0aWFuIiwiZW1haWwiOiJjcmlzdGlhbmd0OUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IioqKioqKioiLCJfX3YiOjB9LCJpYXQiOjE1NDA0OTY0NzgsImV4cCI6MTU0MDUxMDg3OH0.DTrFV06C1amgnxDAAK3-Lcs5YxsR7EygCwrb3AiYsIM",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"medico"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImltZyI6bnVsbCwicm9sZSI6IlVTRVJfUk9MRSIsIl9pZCI6IjViZDFkNGZiNDVhMGY3MjFmNDNkODRlOSIsIm5vbWJyZSI6IkNyaXN0aWFuIiwiZW1haWwiOiJjcmlzdGlhbmd0OUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IioqKioqKioiLCJfX3YiOjB9LCJpYXQiOjE1NDA0OTY0NzgsImV4cCI6MTU0MDUxMDg3OH0.DTrFV06C1amgnxDAAK3-Lcs5YxsR7EygCwrb3AiYsIM"
+						}
+					]
+				},
+				"description": "Este método se encarga de crear un médicos en la base de datos"
+			},
+			"response": []
+		},
+		{
+			"name": "Medico: Actualizar médico por id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Julia Beatriz Torres",
+							"type": "text"
+						},
+						{
+							"key": "hospital",
+							"value": "5bd2299210d5ab1dbc2f5e86",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/medico/5bd22ae73daa9216f03a9f5d?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImltZyI6bnVsbCwicm9sZSI6IlVTRVJfUk9MRSIsIl9pZCI6IjViZDFkNGZiNDVhMGY3MjFmNDNkODRlOSIsIm5vbWJyZSI6IkNyaXN0aWFuIiwiZW1haWwiOiJjcmlzdGlhbmd0OUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IioqKioqKioiLCJfX3YiOjB9LCJpYXQiOjE1NDA0OTY0NzgsImV4cCI6MTU0MDUxMDg3OH0.DTrFV06C1amgnxDAAK3-Lcs5YxsR7EygCwrb3AiYsIM",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"medico",
+						"5bd22ae73daa9216f03a9f5d"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImltZyI6bnVsbCwicm9sZSI6IlVTRVJfUk9MRSIsIl9pZCI6IjViZDFkNGZiNDVhMGY3MjFmNDNkODRlOSIsIm5vbWJyZSI6IkNyaXN0aWFuIiwiZW1haWwiOiJjcmlzdGlhbmd0OUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IioqKioqKioiLCJfX3YiOjB9LCJpYXQiOjE1NDA0OTY0NzgsImV4cCI6MTU0MDUxMDg3OH0.DTrFV06C1amgnxDAAK3-Lcs5YxsR7EygCwrb3AiYsIM"
+						}
+					]
+				},
+				"description": "Este método se encarga de actualizar un medico por su id"
+			},
+			"response": []
+		},
+		{
+			"name": "Medico: Eliminar médico por id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Julia Beatriz Torres",
+							"type": "text"
+						},
+						{
+							"key": "hospital",
+							"value": "5bd2299210d5ab1dbc2f5e86",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/medico/5bd22df3bb2e6824fc06e620?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImltZyI6bnVsbCwicm9sZSI6IlVTRVJfUk9MRSIsIl9pZCI6IjViZDFkNGZiNDVhMGY3MjFmNDNkODRlOSIsIm5vbWJyZSI6IkNyaXN0aWFuIiwiZW1haWwiOiJjcmlzdGlhbmd0OUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IioqKioqKioiLCJfX3YiOjB9LCJpYXQiOjE1NDA0OTY0NzgsImV4cCI6MTU0MDUxMDg3OH0.DTrFV06C1amgnxDAAK3-Lcs5YxsR7EygCwrb3AiYsIM",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"medico",
+						"5bd22df3bb2e6824fc06e620"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImltZyI6bnVsbCwicm9sZSI6IlVTRVJfUk9MRSIsIl9pZCI6IjViZDFkNGZiNDVhMGY3MjFmNDNkODRlOSIsIm5vbWJyZSI6IkNyaXN0aWFuIiwiZW1haWwiOiJjcmlzdGlhbmd0OUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IioqKioqKioiLCJfX3YiOjB9LCJpYXQiOjE1NDA0OTY0NzgsImV4cCI6MTU0MDUxMDg3OH0.DTrFV06C1amgnxDAAK3-Lcs5YxsR7EygCwrb3AiYsIM"
+						}
+					]
+				},
+				"description": "Este método se encarga de elminiar un medico por su id"
+			},
+			"response": []
+		},
+		{
+			"name": "Busqueda: buscar por todo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/busqueda/todo/a",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"busqueda",
+						"todo",
+						"a"
+					]
+				},
+				"description": "Método de busqueda en todas las tablas de la base de datos"
+			},
+			"response": []
+		},
+		{
+			"name": "Busqueda:  buscar por coleccion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/busqueda/coleccion/hospital/a",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"busqueda",
+						"coleccion",
+						"hospital",
+						"a"
+					]
+				},
+				"description": "metodo de busqueda por coleccion"
+			},
+			"response": []
+		},
+		{
+			"name": "Upload: actualizar imagen de un medico por su id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/upload/medicos/5bd23581ff660719983b230d?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImltZyI6bnVsbCwicm9sZSI6IkFETUlOX1JPTEUiLCJfaWQiOiI1YmQxYzZmNjg4ODU0ZDE4NjhhMWU1ZjUiLCJub21icmUiOiJHZXJhbGRpbiIsImVtYWlsIjoiamFpbWUxQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiKioqKioqKiIsIl9fdiI6MH0sImlhdCI6MTU0MDU2ODY0MiwiZXhwIjoxNTQwNTgzMDQyfQ.cs3BPRSoe0kHyh2HJvjPDzli1_R8_D0KrYtORjQn1bE",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"upload",
+						"medicos",
+						"5bd23581ff660719983b230d"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImltZyI6bnVsbCwicm9sZSI6IkFETUlOX1JPTEUiLCJfaWQiOiI1YmQxYzZmNjg4ODU0ZDE4NjhhMWU1ZjUiLCJub21icmUiOiJHZXJhbGRpbiIsImVtYWlsIjoiamFpbWUxQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiKioqKioqKiIsIl9fdiI6MH0sImlhdCI6MTU0MDU2ODY0MiwiZXhwIjoxNTQwNTgzMDQyfQ.cs3BPRSoe0kHyh2HJvjPDzli1_R8_D0KrYtORjQn1bE"
+						}
+					]
+				},
+				"description": "metodo que permite acualizar la imagen de un medico por su id"
+			},
+			"response": []
+		},
+		{
+			"name": "Upload: actualizar imgen de hospitales por id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/upload/hospitales/5bd2299210d5ab1dbc2f5e86?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImltZyI6bnVsbCwicm9sZSI6IkFETUlOX1JPTEUiLCJfaWQiOiI1YmQxYzZmNjg4ODU0ZDE4NjhhMWU1ZjUiLCJub21icmUiOiJHZXJhbGRpbiIsImVtYWlsIjoiamFpbWUxQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiKioqKioqKiIsIl9fdiI6MH0sImlhdCI6MTU0MDU2ODY0MiwiZXhwIjoxNTQwNTgzMDQyfQ.cs3BPRSoe0kHyh2HJvjPDzli1_R8_D0KrYtORjQn1bE",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"upload",
+						"hospitales",
+						"5bd2299210d5ab1dbc2f5e86"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImltZyI6bnVsbCwicm9sZSI6IkFETUlOX1JPTEUiLCJfaWQiOiI1YmQxYzZmNjg4ODU0ZDE4NjhhMWU1ZjUiLCJub21icmUiOiJHZXJhbGRpbiIsImVtYWlsIjoiamFpbWUxQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiKioqKioqKiIsIl9fdiI6MH0sImlhdCI6MTU0MDU2ODY0MiwiZXhwIjoxNTQwNTgzMDQyfQ.cs3BPRSoe0kHyh2HJvjPDzli1_R8_D0KrYtORjQn1bE"
+						}
+					]
+				},
+				"description": "metodo que actualiza la imagen de un hospital por su id"
+			},
+			"response": []
+		},
+		{
+			"name": "Upload: Actualizar imagen de usuarios por id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/upload/usuarios/5bd125a5d9c2cb23cc960543?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImltZyI6bnVsbCwicm9sZSI6IkFETUlOX1JPTEUiLCJfaWQiOiI1YmQxYzZmNjg4ODU0ZDE4NjhhMWU1ZjUiLCJub21icmUiOiJHZXJhbGRpbiIsImVtYWlsIjoiamFpbWUxQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiKioqKioqKiIsIl9fdiI6MH0sImlhdCI6MTU0MDU2ODY0MiwiZXhwIjoxNTQwNTgzMDQyfQ.cs3BPRSoe0kHyh2HJvjPDzli1_R8_D0KrYtORjQn1bE",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"upload",
+						"usuarios",
+						"5bd125a5d9c2cb23cc960543"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImltZyI6bnVsbCwicm9sZSI6IkFETUlOX1JPTEUiLCJfaWQiOiI1YmQxYzZmNjg4ODU0ZDE4NjhhMWU1ZjUiLCJub21icmUiOiJHZXJhbGRpbiIsImVtYWlsIjoiamFpbWUxQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiKioqKioqKiIsIl9fdiI6MH0sImlhdCI6MTU0MDU2ODY0MiwiZXhwIjoxNTQwNTgzMDQyfQ.cs3BPRSoe0kHyh2HJvjPDzli1_R8_D0KrYtORjQn1bE"
+						}
+					]
+				},
+				"description": "metodo para actualizar la imagen de un usuario por su id"
+			},
+			"response": []
+		},
+		{
+			"name": "Imagen: Ver una imagen conociendo su nombre y su coleccion ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/imagen/medicos/5bd23581ff660719983b230d-883.png",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"imagen",
+						"medicos",
+						"5bd23581ff660719983b230d-883.png"
+					]
+				},
+				"description": "Método que permite ver una imagen conociendo su nombre y su coleccion "
+			},
+			"response": []
+		},
+		{
+			"name": "Login: autenticar con google",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjgyODlkNTQyODBiNzY3MTJkZTQxY2QyZWY5NTk3MmIxMjNiZTlhYzAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNjQwNTI0Nzk5NjUxLTNraWJnYjgxNzh1YTkxOGhwcjNtNXN2bDNmMTR0MWFoLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiNjQwNTI0Nzk5NjUxLTNraWJnYjgxNzh1YTkxOGhwcjNtNXN2bDNmMTR0MWFoLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTEzMjU3MjIyNjIyMDg0ODY4MDcxIiwiZW1haWwiOiJjcmlzdGlhbmd0OUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6Ijhtcm9iU2x6Q0N2SjlkTWNpODhweEEiLCJsb2NhbGUiOiJlcyIsImlhdCI6MTU0MDU4OTMzOSwiZXhwIjoxNTQwNTkyOTM5LCJqdGkiOiIyMjhlYmE2MTQ3MWVhZTgyOGE1NjYyOTQ0OTFkNzc5Mjc2ZDhmZmY0In0.XX7I16gpiSYnhrtGOqRtfonYxjJkKVg70eFcMHUPTrX_4zHz7uXwEVv38mEa7I2JodK8rXBCzhZ-Mz5-va6CNau0J4v33KySjU66qHrr8sa0yIR6Xz59W7DrZN6mI0DWhBMjsvTen6SvSJ3s366BrgRz_J8Fd2S0o7qvwpur_8Clav2HOjTSDm_A7WX68UjWrxOP5xi_V2_hqiFgi0Nu8Nq69-v1LDdy4CgoHbk7fLFjMh32qnN3DQ-lT6ujyDfj0cYjLvjyJaJcHxvXj77CGa6J0VP-2E2RUtY6JbmR4G82zqo1Ad0qt35oTcVSougoirLEqxuuSeamwWHq6PMZlg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/login/google",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login",
+						"google"
+					]
+				},
+				"description": "metodo para hacer login con google siempre que el usuario haya sido creado con google"
+			},
+			"response": []
+		}
+	]
+}
